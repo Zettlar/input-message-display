@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input message display</title>
+</head>
+<body>
+    <input type="text" id="entrada" placeholder="Escribe aqui tu entrada de texto" >
+    <p id="resultado">Este parrafo muestra el texto </p>
+
+<script>
+document.addEventListener("DOMContentLoaded" , function (){
+    let entrada = document.getElementById ("entrada")
+    let resultado = document.getElementById("resultado") 
+
+    entrada.addEventListener("keydown" , function (event){
+        if (event.key === "Enter") {
+            resultado.innerHTML = entrada.value
+        }
+    })
+})  
+</script>    
+</body>
+</html>
